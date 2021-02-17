@@ -5,11 +5,18 @@ import java.util.ArrayList;
 public class Application {
 	public static void main(String args[])
 	{
-		SequenceGen gen = new SequenceGen(100);
+		int len;
+		if(args.length >0)
+			len = Integer.parseInt(args[0]);
+		else
+			len = 100;
+		SequenceGen gen = new SequenceGen(len);
 		ArrayList<Integer> seq = gen.GenerateSequence();
 		
 		SequenceFinder finder = new SequenceFinder();
 		
-		finder.longestSequence(seq);
+		ArrayList<Integer> longest = finder.longestSequence(seq);
+		System.out.println("Sequence: " + seq.toString());
+		System.out.println("Longest Subsequence: " + longest.toString());
 	}
 }

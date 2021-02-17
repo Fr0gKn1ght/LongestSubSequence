@@ -5,6 +5,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
+//Code Provided by instructor
 public class SequenceGen {
 
     private int n;
